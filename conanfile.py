@@ -1,9 +1,9 @@
 from conans import ConanFile, CMake, tools
-
+import shutil
 
 class CxxoptsConan(ConanFile):
     name = "cxxopts"
-    version = "2.0.0"
+    version = "2.1.1"
     license = "MIT"
     author = "Darlan Cavalcante Moreira (darcamo@gmail.com)"
     url = "https://github.com/darcamo/conan-recipes"
@@ -12,8 +12,8 @@ class CxxoptsConan(ConanFile):
     homepage = "https://github.com/jarro2783/cxxopts"
 
     def source(self):
-        self.run("git clone https://github.com/jarro2783/cxxopts.git")
-        self.run("cd cxxopts && git checkout v2.0.0")
+        tools.get("https://github.com/jarro2783/cxxopts/archive/v{}.zip".format(self.version))
+        shutil.move("cxxopts-{}/".format(self.version), "sources")
 
     def package(self):
-        self.copy("include/cxxopts.hpp", src="cxxopts")
+        self.copy("include/cxxopts.hpp", src="sources")
