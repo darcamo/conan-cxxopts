@@ -6,7 +6,7 @@ class CxxoptsConan(ConanFile):
     version = "2.1.1"
     license = "MIT"
     author = "Darlan Cavalcante Moreira (darcamo@gmail.com)"
-    url = "https://github.com/darcamo/conan-recipes"
+    url = "https://github.com/darcamo/conan-cxxopts"
     description = "Lightweight C++ command line option parser."
     no_copy_source = True
     homepage = "https://github.com/jarro2783/cxxopts"
