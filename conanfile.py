@@ -3,7 +3,7 @@ import shutil
 
 class CxxoptsConan(ConanFile):
     name = "cxxopts"
-    version = "2.1.1"
+    version = "2.1.2"
     license = "MIT"
     author = "Darlan Cavalcante Moreira (darcamo@gmail.com)"
     url = "https://github.com/darcamo/conan-cxxopts"
