@@ -1,5 +1,7 @@
-from conans import ConanFile, CMake, tools
 import shutil
+
+from conans import CMake, ConanFile, tools
+
 
 class CxxoptsConan(ConanFile):
     name = "cxxopts"
@@ -17,3 +19,6 @@ class CxxoptsConan(ConanFile):
 
     def package(self):
         self.copy("include/cxxopts.hpp", src="sources")
+
+    def package_id(self):
+        self.info.header_only()
